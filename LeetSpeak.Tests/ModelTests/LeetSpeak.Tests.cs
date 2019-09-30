@@ -1,8 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using LeetSpeak;
+using Leet;
 
-namespace LeetSpeak.Tests
+namespace Leet.Tests
 {
     [TestClass]
     public class LeetSpeakTest
@@ -47,6 +47,13 @@ namespace LeetSpeak.Tests
         {
             LeetSpeak leet = new LeetSpeak();
             Assert.AreEqual("ca7z", leet.Translate("cats"));
+        }
+
+        [TestMethod]
+        public void Translate_NoReplaceFirstS_NoSReplaced()
+        {
+            LeetSpeak leet = new LeetSpeak();
+            Assert.AreEqual("s3al", leet.Translate("seal"));
         }
     }
     }
