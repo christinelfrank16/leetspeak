@@ -41,5 +41,12 @@ namespace LeetSpeak.Tests
             LeetSpeak leet = new LeetSpeak();
             Assert.AreEqual("7r3a7", leet.Translate("treat"));
         }
+
+        [TestMethod]
+        public void Translate_ReplaceS_SReplaced()
+        {
+            LeetSpeak leet = new LeetSpeak();
+            Assert.AreEqual("ca7z", leet.Translate("cats"));
+        }
     }
-}
+    }
